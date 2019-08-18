@@ -1,0 +1,35 @@
+Movimenta a tarefa ===
+
+http://wf.linx.com.br/Views/MovimentacaoTarefa.aspx?tarefa=30785147&_dc=1557552136963 === 
+
+-------------------------------------------
+
+Buscar tarefa === 
+
+http://wf.linx.com.br/Views/FilaAtendimento.aspx?cmbTarefa_Value=30785147&__EVENTTARGET=ResourceManager1&__EVENTARGUMENT=-%7Cpublic%7CBuscarTarefa
+
+-----------------------------------------
+JSON Busca CLIENTE CNPJ ===
+
+http://wf.linx.com.br/Handler/ContatoHandler.ashx?start=0&limit=10&categoriaContato=2&incluirGrupos=1&query=03299835000182
+
+
+-----------------------------------------
+
+Abrir chamado ===
+
+http://wf.linx.com.br/Views/AberturaChamados/ChamadosFiliais.aspx?contaSolicitante=132682&solicitante=132682
+
+
+-----------------------------------------
+http://seller7auditoria.sellercorp.com.br/AuditSitSites.aspx?ID=959AA167666467949AAB636665679E99A76D676E9499A263666565949CABD7DEE2A167&POSTOESCOLA=N&PERFIL=4&SISTEMA=16715&LOJA=1&&DirAction=CarregaSites&d_PageIndex=0&d_RegPag=100&d_EstaNom=&d_EstaUrlRet=&d_EmprCnpj=03299835000182
+
+
+http://seller7auditoria.sellercorp.com.br/AuditSitSites.aspx?ID=959AA167666467949AAB636665679E99A76D676E9499A263666565949CABD7DEE2A167&PERFIL=4&LOJA=1&&DirAction=CarregaSites&d_RegPag=1000&d_EstaNom=&d_EstaUrlRet=&d_EmprCnpj=
+
+
+
+
+https://cliente.linx.com.br/webchamados/enviar?csrf_linx_customer_token=d2ebb55e137cd1560e5137f73530dd74&cnpj_pesquisa=54.517.628%2F0001-98&codigo_cliente=000001&unidade_negocio=7654706&tipo_de_solicitacao=2047417&list_produtos%5B816%5D=27698208&list_produtos%5B817%5D=27701172&list_produtos%5B818%5D=27701311&list_produtos%5B819%5D=27701775&list_produtos%5B824%5D=27702970&descricao_resumo=Sincronia&descricao_detalhada=Teste+para+funcionalidade+no+PDV.&boilerplate=&cnpj_pesquisa_default=54517628000198&estabelecimento_email=gustavo.freitas%40neemu.com&estabelecimento_telefone=(11)+9999-99999&estabelecimento_celular=(11)+9999-9999&solicitante_email=gustavo.freitas%40neemu.com&solicitante_telefone=(00)+0000-0000&solicitante_celular=(00)+0000-0000&classificacao%5Balternativa%5D=1
+
+https://cliente.linx.com.br/atendimento/xhr_buscar_duvidas?s=Sincronia&paged=0&segmento=POSTOS+-+SELLER&produto=

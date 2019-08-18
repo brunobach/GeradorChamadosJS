@@ -1,0 +1,167 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+
+<script>
+function funcGerar() {
+  
+ 
+
+  var cnpj_desc = 'CNPJ: '
+  var incidente_desc = 'Incidente/Erro: '
+  var nome_desc = 'Nome: '
+  var email_desc = 'E-mail: '
+  var site_desc = 'Site: '
+
+  var cnpj = document.getElementById("CNPJ").value;
+  var incidente = document.getElementById("incidente").value
+  var nome = document.getElementById("nome").value
+  var email = document.getElementById("email").value
+  var site = document.getElementById("site").value
+  
+
+  var texto = incidente_desc.concat(incidente).concat('\n').concat(cnpj_desc).concat(cnpj).concat('\n').concat(nome_desc).concat(nome).concat('\n').concat(email_desc).concat(email).concat('\n').concat(site_desc).concat(site)
+
+  document.getElementById("gerador").value = texto
+
+ 
+  
+}
+</script>
+<div class="col-md-6 mx-auto">
+<div class="card">
+    <div class="card-header">
+        <h3>Novo Chamado</h3>
+    </div>
+    <div class="card-body">
+        <form action="/chamados/new" method="POST">
+        <div class="form-row">
+        
+          <div class="input-group mb-1 mr-sm-2">
+            <fieldset disabled>
+          <div class="input-group-text">CNPJ</div>
+              </fieldset>
+        <input type="text" oninput="funcGerar()" name="CNPJ" id="CNPJ" class="form-control mb-10" placeholder="Entre com CNPJ Seller" autofocus></input><a></a>
+      
+       
+          </div>
+        
+          <div class="input-group mb-1 mr-sm-2">
+          <fieldset disabled>
+          <div class="input-group-text">Descrição</div>
+              </fieldset>
+            <input type="text" name="incidente" oninput="funcGerar()" id="incidente" class="form-control mb-10" placeholder="incidente"></input>
+        </div>
+        {{!Outro campo}}
+        <div class="input-group mb-1 mr-sm-2">
+          <fieldset disabled>
+          <div class="input-group-text">Nome</div>
+              </fieldset>
+            <input type="text" name="nome" oninput="funcGerar()" id="nome" class="form-control mb-10" placeholder="Entre com o Nome"></input>
+        </div>
+       
+         {{!Outro campo}}
+        <div class="input-group mb-1 mr-sm-2">
+          <fieldset disabled>
+          <div class="input-group-text">Telefone</div>
+              </fieldset>
+            <input type="text" name="telefone" oninput="funcGerar()" id="telefone" class="form-control mb-10" placeholder="Entre com o Telefone"></input>
+        </div>
+        {{!Divisão}}
+        <div class="input-group mb-1 mr-sm-2">
+          <fieldset disabled>
+          <div class="input-group-text">E-mail</div>
+              </fieldset>
+            <input type="text" name="email" oninput="funcGerar()" id="email" class="form-control mb-10" placeholder="Entre com o E-mail"></input>
+        </div>
+       
+         {{!Outro campo}}
+        <div class="input-group mb-1 mr-sm-2">
+          <fieldset disabled>
+          <div class="input-group-text">Site</div>
+              </fieldset>
+            <input type="text" name="site" oninput="funcGerar()" id="site" class="form-control mb-10" placeholder="Entre com o site"></input>
+        </div>
+        {{!Divisão}}
+        </div>
+        
+
+        </div>
+
+        
+          <div class="btn-group btn-group-md">
+          
+            <button class="btn btn-primary" type="submit">Salvar Chamado</button>
+            
+            <button type="button" onclick="myFunction()" class="btn btn-outline-success col-4" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Buscar CNPJ</button>
+          
+        </div>
+
+
+        </div>          
+        </div>
+        
+    </form>
+        
+    </div>
+</div>
+<br>
+<div class="col-md-6 mx-auto">
+<div class="form-group">
+            <textarea oninput="funcGerar()" on name="gerador" id="gerador" class="form-control" placeholder="gerador"></textarea>
+        </div>
+        </div>
+
+{{!Modal para busca de cnpj no sistema}}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Buscando CNPJ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+              
+                  <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-text">CNPJ</div>
+              <fieldset disabled>
+            <input type="text" class="form-control" id="cnpj_buscar">
+            </fieldset>
+          </div>
+          
+            
+          
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalhes</label>
+            <textarea class="form-control" id="incidente_buscar"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">fechar</button>
+        <button type="button" class="btn btn-primary">adicionar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+CNPJ
+NOME DO CONTATO
+TELEFONE
+ERRO/DUVIDA
+E-MAIL
+SITE
+CAMPO ADICIONAL

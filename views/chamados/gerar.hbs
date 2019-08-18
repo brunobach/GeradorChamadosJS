@@ -1,0 +1,61 @@
+<script type="text/javascript">
+/*
+function getRest(){
+
+ $.ajax({
+  type: 'POST',
+  url: 'http://wf.linx.com.br/Handler/ContatoHandler.ashx?start=0&limit=10&categoriaContato=2&incluirGrupos=1&query=03299835000182',
+  dataType: 'json',
+
+  beforeSend: function (xhr) {
+    xhr.setRequestHeader('Authorization', basicOath('bruno.azevedo', 'linx2019@1'));
+  },
+  success: function () {
+   console.log('Leitura realizada com sucesso')
+  },
+  error: function(jqXHR, status) {
+   console.log('nao saiu do lugar' + status)
+  }
+ });
+}
+
+function basicOath(account, secret) {
+ var tok = account + ':' + secret;
+ var hash = btoa(tok);
+ return 'Basic ' + hash;
+}
+
+
+
+
+
+
+var auth = btoa('bruno.azevedo:linx2019@1');
+$.ajax({
+    type: 'GET',
+    url: 'http://wf.linx.com.br/Handler/ContatoHandler.ashx?start=0&limit=10&categoriaContato=2&incluirGrupos=1&query=03299835000182',
+    headers: {
+        "Authorization": "Basic " + auth
+    },
+    success : function(data) {
+    },
+});
+*/
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://wf.linx.com.br/Handler/ContatoHandler.ashx?start=0&limit=10&categoriaContato=2&incluirGrupos=1&query=03299835000182",
+  "method": "GET",
+  "headers": {
+    "authorization": "Basic YnJ1bm8uYXpldmVkbzpsaW54MjAxOUAx",
+    "cache-control": "no-cache",
+    "postman-token": "29ec6e66-5501-8554-1146-dd37ecf81bdb"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+</script>
