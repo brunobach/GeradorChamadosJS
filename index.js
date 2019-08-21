@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const session = require('express-session');
 var cors = require('cors');
+require("dotenv").config()
 
 
   
