@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require("dotenv").config()
 
-mongoose.connect('mongodb://localhost/notes-db-app', {
+mongoose.connect('process.env.DB_URI', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
