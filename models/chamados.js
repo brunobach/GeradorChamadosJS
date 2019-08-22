@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+require("dotenv").config()
 const { Schema } = mongoose
 
 const NoteSchema = new Schema({
