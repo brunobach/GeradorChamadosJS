@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require("dotenv").config()
 
-mongoose.connect('process.env.DB_URI', {
+mongoose.connect('mongodb+srv://dbUser:dbPass@clusterbruno-hbzd9.mongodb.net/test?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
