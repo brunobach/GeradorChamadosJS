@@ -15,6 +15,7 @@ function funcGerar() {
   var cnpj_desc = 'CNPJ: '
   var incidente_desc = 'Incidente/Erro: '
   var nome_desc = 'Nome: '
+  var telefone_desc = 'Telefone: '
   var email_desc = 'E-mail: '
   var site_desc = 'Site: '
 
@@ -23,9 +24,10 @@ function funcGerar() {
   var nome = document.getElementById("nome").value
   var email = document.getElementById("email").value
   var site = document.getElementById("site").value
+  var telefone = document.getElementById("telefone").value
   
 
-  var texto = incidente_desc.concat(incidente).concat('\n').concat(cnpj_desc).concat(cnpj).concat('\n').concat(nome_desc).concat(nome).concat('\n').concat(email_desc).concat(email).concat('\n').concat(site_desc).concat(site)
+  var texto = incidente_desc.concat(incidente).concat('\n').concat(cnpj_desc).concat(cnpj).concat('\n').concat(nome_desc).concat(nome).concat('\n').concat(telefone_desc).concat(telefone).concat('\n').concat(email_desc).concat(email).concat('\n').concat(site_desc).concat(site)
 
   document.getElementById("gerador").value = texto
 
